@@ -144,6 +144,8 @@ while running:
     pygame.draw.rect(canvas, (255, 255, 255), (board_width, 0, extra_width, board_height))
 
     # Render the predicted digit text
+    if(predicted_char == "CR7"):
+        predicted_char = "SIUUUUUUU"
     text_surface = font.render("Predicted: " + (predicted_char if predicted_char is not None else ""), True, (0, 0, 0))  # Render text in black
     canvas.blit(text_surface, (board_width + 10, board_height // 2))
 
